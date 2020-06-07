@@ -22,8 +22,8 @@ public class MegaBytesConverter {
 
     public static void printMegaBytesAndKiloBytes(int kiloBytes) {
 
-        int remainingKiloBytes = kiloBytes - 1024;
-        int megabytes = kiloBytes - remainingKiloBytes;
+        int remainingKiloBytes = kiloBytes % 1024;
+        int megabytes = kiloBytes / 1024;
 
         if(kiloBytes < 0) {
             System.out.println("Invalid Value");
